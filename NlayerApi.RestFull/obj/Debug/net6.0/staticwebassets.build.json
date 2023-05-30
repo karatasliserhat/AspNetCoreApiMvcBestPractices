@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CoEI06kUjgxCZh6H+dX0O5F2bc7Oi4UXTzlEtGppbXI=",
+  "Source": "NlayerApi.RestFull",
+  "BasePath": "_content/NlayerApi.RestFull",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

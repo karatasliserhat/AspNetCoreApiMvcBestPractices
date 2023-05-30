@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "NlayerApi.Repository/1.0.0": {
+        "dependencies": {
+          "NlayerApi.Core": "1.0.0"
+        },
+        "runtime": {
+          "NlayerApi.Repository.dll": {}
+        }
+      },
+      "NlayerApi.Core/1.0.0": {
+        "runtime": {
+          "NlayerApi.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NlayerApi.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NlayerApi.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

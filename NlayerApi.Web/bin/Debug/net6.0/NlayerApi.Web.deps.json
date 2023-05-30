@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "NlayerApi.Web/1.0.0": {
+        "dependencies": {
+          "NlayerApi.Service": "1.0.0"
+        },
+        "runtime": {
+          "NlayerApi.Web.dll": {}
+        }
+      },
+      "NlayerApi.Core/1.0.0": {
+        "runtime": {
+          "NlayerApi.Core.dll": {}
+        }
+      },
+      "NlayerApi.Repository/1.0.0": {
+        "dependencies": {
+          "NlayerApi.Core": "1.0.0"
+        },
+        "runtime": {
+          "NlayerApi.Repository.dll": {}
+        }
+      },
+      "NlayerApi.Service/1.0.0": {
+        "dependencies": {
+          "NlayerApi.Repository": "1.0.0"
+        },
+        "runtime": {
+          "NlayerApi.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NlayerApi.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NlayerApi.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NlayerApi.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NlayerApi.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
