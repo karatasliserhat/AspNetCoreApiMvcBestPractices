@@ -31,9 +31,9 @@ namespace NlayerApi.Repository.GenericRepositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<IEnumerable<T>> GetAll()
+        public IQueryable<T> GetAll()
         {
-            return (IQueryable<IEnumerable<T>>)_dbSet.AsNoTracking().AsQueryable().ToList();
+            return _dbSet.AsNoTracking().AsQueryable();
         }
 
         public async Task<T> GetByIdAsync(int id)

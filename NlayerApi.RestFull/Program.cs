@@ -5,15 +5,19 @@ using NlayerApi.Core.UnitOfWork;
 using NlayerApi.Repository.Context;
 using NlayerApi.Repository.GenericRepositories;
 using NlayerApi.Repository.UnitOfWorks;
+using NlayerApi.Service.Mappings;
+using NlayerApi.Service.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-//builder.Services.AddScoped(typeof(IService<>), typeof(Services<>));
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 
-builder.Services.AddDbContext<AppDbContext>(opts =>{
+builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddDbContext<AppDbContext>(opts =>
+{
 
     opts.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options =>
     {

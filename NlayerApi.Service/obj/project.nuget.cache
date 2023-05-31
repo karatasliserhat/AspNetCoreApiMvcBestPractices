@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RIZEp+QCSCgcVPYpmxHsU2V8ewisN/GbIBBpXrGZ8k82lsmbhSyi11wu06CV/p9nsHczmVUEV44CVQJvoLbwsw==",
+  "dgSpecHash": "7vEsXbwsMg5+8LPczsEk9wG73kjsUKKMtKpGzZKABCpG1DgWXIswLZ1oz9TjISsF7KwMcv7LBm9WsJYRCRLFmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Service\\NlayerApi.Service.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",

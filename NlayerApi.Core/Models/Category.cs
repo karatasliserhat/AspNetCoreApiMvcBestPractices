@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NlayerApi.Core.Models
+﻿namespace NlayerApi.Core.Models
 {
     public class Category:BaseModel
     {
