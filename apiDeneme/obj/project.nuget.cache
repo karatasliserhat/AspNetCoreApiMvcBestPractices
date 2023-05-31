@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ihHmmkukqgZ/ODqRXkooF5bMnuZs3Q4oGz2STsZVV9ZWGAKc/c1IUUQeJ3popZGNbSk+hJ7XUkDvToKacKry1w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\apiDeneme\\apiDeneme.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
