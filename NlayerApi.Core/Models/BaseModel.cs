@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NlayerApi.Core.Models
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }

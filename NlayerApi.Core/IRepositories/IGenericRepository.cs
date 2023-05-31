@@ -9,9 +9,13 @@ namespace NlayerApi.Core.IRepositories
 {
     public  interface IGenericRepository<T> where T:class
     {
+<<<<<<< HEAD
         IQueryable<T> GetAll();
+=======
+        IQueryable<List<T>> GetAll();
+>>>>>>> NlayerApRepository
         Task<T> GetByIdAsync(int id);
-        Task<bool> Any(Expression<Func<T, bool>> expression);
+        Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task AddAsync(T entity);
         Task AddRangeAsync(IEnumerable<T> entities);
