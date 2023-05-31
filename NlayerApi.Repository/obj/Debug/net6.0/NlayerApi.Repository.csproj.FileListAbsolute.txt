@@ -1,4 +1,5 @@
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Repository.deps.json
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Repository.runtimeconfig.json
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Repository.dll
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Repository.pdb
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Core.dll
@@ -12,6 +13,5 @@ C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAsp
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\NlayerApi.Repository.dll
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\refint\NlayerApi.Repository.dll
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\NlayerApi.Repository.pdb
-C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\ref\NlayerApi.Repository.dll
-C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net6.0\NlayerApi.Repository.runtimeconfig.json
 C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\NlayerApi.Repository.genruntimeconfig.cache
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net6.0\ref\NlayerApi.Repository.dll
