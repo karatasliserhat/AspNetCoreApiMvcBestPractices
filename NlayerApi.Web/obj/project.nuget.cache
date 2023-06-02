@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "7nMDInucXnbuRjjDwv4Llu8Ks8INvJz96LuDrY8GfaSbmcmCtG5OtZ1Gf0XbffRSXDAmAsy+b0vcPK7Y0EzjFg==",
+  "dgSpecHash": "aDyJf/s1Ockcy0qZ3FnDosk40WkDSwffFJFs0LKZslLOg36EnG26erdm6qmwX+r4Z4jDQ0b6Qod6T03xAu4ZZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Web\\NlayerApi.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\glb90090219\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

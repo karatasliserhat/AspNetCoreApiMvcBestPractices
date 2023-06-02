@@ -1,3 +1,5 @@
+﻿using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NlayerApi.Core.IRepositories;
 using NlayerApi.Core.IServices;
@@ -5,64 +7,61 @@ using NlayerApi.Core.UnitOfWork;
 using NlayerApi.Repository.Context;
 using NlayerApi.Repository.GenericRepositories;
 using NlayerApi.Repository.UnitOfWorks;
+using NlayerApi.RestFull.Filters;
 using NlayerApi.Service.Mappings;
 using NlayerApi.Service.Services;
+using NlayerApi.Service.Validations;
 using System.Reflection;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
-
-builder.Services.AddAutoMapper(typeof(MapperProfile));
-builder.Services.AddDbContext<AppDbContext>(opts =>
+internal class Program
 {
-
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options =>
+    private static void Main(string[] args)
     {
-        options.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
-    });
-});
+        var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+        builder.Services.AddControllers(opts => opts.Filters.Add(new ValidationActionFilter())).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<ProductValidation>());
 
-var app = builder.Build();
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+        builder.Services.AddScoped<IProductRepository, ProductRepository>();
+        builder.Services.AddScoped<IProductService, ProductService>();
+        builder.Services.AddScoped<ICategoryService, CategoryService>();
+        builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+        builder.Services.AddAutoMapper(typeof(MapperProfile));
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-app.UseSwagger();
-app.UseSwaggerUI();
-}
+        //api servisler kendi filterlarımızı algılaması için varsayılan modelstate filterine kapatmamanız gerekiyor
+        builder.Services.Configure<ApiBehaviorOptions>(opts => { opts.SuppressModelStateInvalidFilter = true; });
 
-app.UseHttpsRedirection();
+        builder.Services.AddDbContext<AppDbContext>(opts =>
+        {
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+            opts.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options =>
+            {
+                options.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
+            });
+        });
 
-app.MapGet("/weatherforecast", () =>
-{
-var forecast = Enumerable.Range(1, 5).Select(index =>
-    new WeatherForecast
-    (
-        DateTime.Now.AddDays(index),
-        Random.Shared.Next(-20, 55),
-        summaries[Random.Shared.Next(summaries.Length)]
-    ))
-    .ToArray();
-return forecast;
-})
-.WithName("GetWeatherForecast");
 
-app.Run();
+        // Add services to the container.
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-internal record WeatherForecast(DateTime Date, int TemperatureC, string Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
 }

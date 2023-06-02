@@ -8,57 +8,57 @@ namespace NlayerApi.Repository.GenericRepositories
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly AppDbContext _context;
-        private DbSet<T> _dbset { get; set; }
+        //private readonly DbSet<T> _dbset;
         public GenericRepository(AppDbContext context)
         {
-            _context = context;
-            _dbset = _context.Set<T>();
+            _context =context;
+            //_dbset = _context.Set<T>();
         }
 
         protected readonly DbSet<T> _dbSet;
         public async Task AddAsync(T entity)
         {
-            await _dbSet.AddAsync(entity);
+            await _context.Set<T>().AddAsync(entity);
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
         {
-            await _dbSet.AddRangeAsync(entities);
+            await _context.Set<T>().AddRangeAsync(entities);
         }
 
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression)
         {
-            return await _dbSet.AnyAsync(expression);
+            return await _context.Set<T>().AnyAsync(expression);
         }
 
         public IQueryable<T> GetAll()
         {
-            return _dbSet.AsNoTracking().AsQueryable();
+            return _context.Set<T>().AsNoTracking().AsQueryable();
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            return await _context.Set<T>().FindAsync(id);
         }
 
         public void Remove(T entity)
         {
-            _dbSet.Remove(entity);
+            _context.Set<T>().Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<T> entities)
         {
-            _dbSet.RemoveRange(entities);
+            _context.Set<T>().RemoveRange(entities);
         }
 
         public void Update(T entity)
         {
-            _dbSet.Update(entity);
+            _context.Set<T>().Update(entity);
         }
 
         public IQueryable<T> Where(Expression<Func<T, bool>> expression)
         {
-            return _dbSet.Where(expression);
+            return _context.Set<T>().Where(expression);
         }
     }
 }

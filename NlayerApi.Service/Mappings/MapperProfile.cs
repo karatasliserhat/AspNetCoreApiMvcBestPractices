@@ -1,11 +1,6 @@
 ﻿using AutoMapper;
 using NlayerApi.Core.DTOs;
 using NlayerApi.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NlayerApi.Service.Mappings
 {
@@ -17,6 +12,9 @@ namespace NlayerApi.Service.Mappings
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
             CreateMap<ProductUpdateDto, Product>();
+            CreateMap<Product, ProductWithCategoryDto>();
+            CreateMap<Product, ProductCreateDto>().ReverseMap();
+            CreateMap<Category,GetByCategoryWithProductDto>();
         }
     }
 }
