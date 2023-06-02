@@ -2,6 +2,7 @@
 using NlayerApi.Core.IRepositories;
 using NlayerApi.Core.IServices;
 using NlayerApi.Core.UnitOfWork;
+using NlayerApi.Service.Exceptions;
 using System.Linq.Expressions;
 
 namespace NlayerApi.Service.Services
@@ -43,7 +44,10 @@ namespace NlayerApi.Service.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var data = await _repository.GetByIdAsync(id);
+            if (data == null)
+                throw new NoContentException($"{typeof(T).Name} {id} not found");
+            return data;
         }
 
         public async Task RemoveAsync(T entity)

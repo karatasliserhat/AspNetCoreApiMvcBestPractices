@@ -18,6 +18,7 @@ namespace NlayerApi.RestFull.CustomException
                     var statusCode = exceptionFeature.Error switch
                     {
                         ClientSideException => 400,
+                        NoContentException=> 404,
                         _ => 500
                     };
                     context.Response.StatusCode = statusCode;

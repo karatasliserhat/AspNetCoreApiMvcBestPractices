@@ -7,6 +7,7 @@ using NlayerApi.Core.UnitOfWork;
 using NlayerApi.Repository.Context;
 using NlayerApi.Repository.GenericRepositories;
 using NlayerApi.Repository.UnitOfWorks;
+using NlayerApi.RestFull.CustomException;
 using NlayerApi.RestFull.Filters;
 using NlayerApi.Service.Mappings;
 using NlayerApi.Service.Services;
@@ -57,7 +58,7 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
-
+        app.CustomExceptionError();
         app.UseAuthorization();
 
         app.MapControllers();
