@@ -970,6 +970,19 @@
           }
         }
       },
+      "NlayerApi.Cache/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NlayerApi.Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NlayerApi.Cache.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NlayerApi.Cache.dll": {}
+        }
+      },
       "NlayerApi.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2674,6 +2687,11 @@
         "version.txt"
       ]
     },
+    "NlayerApi.Cache/1.0.0": {
+      "type": "project",
+      "path": "../NlayerApi.Cache/NlayerApi.Cache.csproj",
+      "msbuildProject": "../NlayerApi.Cache/NlayerApi.Cache.csproj"
+    },
     "NlayerApi.Core/1.0.0": {
       "type": "project",
       "path": "../NlayerApi.Core/NlayerApi.Core.csproj",
@@ -2694,7 +2712,7 @@
     "net6.0": [
       "Autofac.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.16",
-      "NlayerApi.Service >= 1.0.0",
+      "NlayerApi.Cache >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -2731,8 +2749,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Service\\NlayerApi.Service.csproj": {
-              "projectPath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Service\\NlayerApi.Service.csproj"
+            "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Cache\\NlayerApi.Cache.csproj": {
+              "projectPath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.Cache\\NlayerApi.Cache.csproj"
             }
           }
         }

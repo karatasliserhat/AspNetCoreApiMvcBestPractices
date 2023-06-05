@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NlayerApi.Web", "NlayerApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NlayerApi.RestFull", "NlayerApi.RestFull\NlayerApi.RestFull.csproj", "{ECFC5CBB-20CD-43CF-BE95-B23CDC548F44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NlayerApi.Cache", "NlayerApi.Cache\NlayerApi.Cache.csproj", "{1DBEC247-2B70-410B-A6E4-E07625E88084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ECFC5CBB-20CD-43CF-BE95-B23CDC548F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECFC5CBB-20CD-43CF-BE95-B23CDC548F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECFC5CBB-20CD-43CF-BE95-B23CDC548F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DBEC247-2B70-410B-A6E4-E07625E88084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBEC247-2B70-410B-A6E4-E07625E88084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBEC247-2B70-410B-A6E4-E07625E88084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBEC247-2B70-410B-A6E4-E07625E88084}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

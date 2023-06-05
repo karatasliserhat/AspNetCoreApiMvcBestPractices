@@ -10,7 +10,7 @@
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.16",
-          "NlayerApi.Service": "1.0.0",
+          "NlayerApi.Cache": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -566,6 +566,14 @@
           }
         }
       },
+      "NlayerApi.Cache/1.0.0": {
+        "dependencies": {
+          "NlayerApi.Service": "1.0.0"
+        },
+        "runtime": {
+          "NlayerApi.Cache.dll": {}
+        }
+      },
       "NlayerApi.Core/1.0.0": {
         "runtime": {
           "NlayerApi.Core.dll": {}
@@ -983,6 +991,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "NlayerApi.Cache/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "NlayerApi.Core/1.0.0": {
       "type": "project",
