@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using NlayerApi.Core.DTOs;
 using NlayerApi.Core.IServices;
 using NlayerApi.Core.Models;
+using NlayerApi.RestFull.Filters;
 using NlayerApi.RestFull.Helper;
 
 namespace NlayerApi.RestFull.Controllers
@@ -27,6 +28,7 @@ namespace NlayerApi.RestFull.Controllers
 
             return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(responseData, 200));
         }
+        [ServiceFilter(typeof(NotFoundActionFilter<Product>))]
         [HttpGet("{productId}")]
         public async Task<IActionResult> GetProductById(int productId)
         {

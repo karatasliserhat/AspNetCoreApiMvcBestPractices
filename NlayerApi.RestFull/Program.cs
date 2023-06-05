@@ -1,6 +1,9 @@
-﻿using FluentValidation.AspNetCore;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NlayerApi.Core.DTOs;
 using NlayerApi.Core.IRepositories;
 using NlayerApi.Core.IServices;
 using NlayerApi.Core.UnitOfWork;
@@ -9,6 +12,7 @@ using NlayerApi.Repository.GenericRepositories;
 using NlayerApi.Repository.UnitOfWorks;
 using NlayerApi.RestFull.CustomException;
 using NlayerApi.RestFull.Filters;
+using NlayerApi.RestFull.Modules;
 using NlayerApi.Service.Mappings;
 using NlayerApi.Service.Services;
 using NlayerApi.Service.Validations;
@@ -21,15 +25,8 @@ internal class Program
 
         builder.Services.AddControllers(opts => opts.Filters.Add(new ValidationActionFilter())).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<ProductValidation>());
 
-        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-        builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-        builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
-        builder.Services.AddScoped<IProductRepository, ProductRepository>();
-        builder.Services.AddScoped<IProductService, ProductService>();
-        builder.Services.AddScoped<ICategoryService, CategoryService>();
-        builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddAutoMapper(typeof(MapperProfile));
-
+        builder.Services.AddScoped(typeof(NotFoundActionFilter<>));
         //api servisler kendi filterlarımızı algılaması için varsayılan modelstate filterine kapatmamanız gerekiyor
         builder.Services.Configure<ApiBehaviorOptions>(opts => { opts.SuppressModelStateInvalidFilter = true; });
 
@@ -47,6 +44,10 @@ internal class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+        builder.Host.ConfigureContainer<ContainerBuilder>(conf => conf.RegisterModule(new RepoServiceModule()));
+
 
         var app = builder.Build();
 

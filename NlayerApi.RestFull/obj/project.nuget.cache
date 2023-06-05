@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vvmMa9OJdpYt5QboX6StkMLdG5yKYrUEIZhnjTZdGKcm4g3Ijxv/3rySWLmaXh7UDZkUKK3W9YhHSN5ARE3/gw==",
+  "dgSpecHash": "A7+ukZ9GP2nCYHZKM8J9WPczpDkd681QE5M8EH/mCHM91UkSkC77Z6H0ZoCzcqaczHiew0gg19B5mBrAecMacQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\glb90090219\\Documents\\Tfs\\serhatkaratasli\\IdentityUserProject\\NlayerAspNetCoreApi\\NlayerApi.RestFull\\NlayerApi.RestFull.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\glb90090219\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\glb90090219\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\glb90090219\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
