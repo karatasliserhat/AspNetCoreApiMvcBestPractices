@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model List<ProductWithCategoryDto>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-end mb-2">
+            <a asp-action="Save" asp-controller="Products" class="btn btn-primary">New product</a>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Category Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Stock</td>
+                        <td>@item.Priace</td>
+                        <td>@item.Category.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

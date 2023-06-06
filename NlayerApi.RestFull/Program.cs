@@ -3,18 +3,11 @@ using Autofac.Extensions.DependencyInjection;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NlayerApi.Core.DTOs;
-using NlayerApi.Core.IRepositories;
-using NlayerApi.Core.IServices;
-using NlayerApi.Core.UnitOfWork;
 using NlayerApi.Repository.Context;
-using NlayerApi.Repository.GenericRepositories;
-using NlayerApi.Repository.UnitOfWorks;
 using NlayerApi.RestFull.CustomException;
 using NlayerApi.RestFull.Filters;
 using NlayerApi.RestFull.Modules;
 using NlayerApi.Service.Mappings;
-using NlayerApi.Service.Services;
 using NlayerApi.Service.Validations;
 using System.Reflection;
 internal class Program
