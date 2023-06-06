@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using NlayerApi.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -31,5 +33,29 @@ namespace NlayerApi.Repository.Context
             });
             base.OnModelCreating(modelBuilder);
         }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            foreach (var item in ChangeTracker.Entries())
+            {
+                if (item.Entity is BaseModel entityRef)
+                {
+                    switch (item.State)
+                    {
+
+                        case EntityState.Added:
+                            entityRef.CreatedDate = DateTime.Now;
+                            break;
+                        case EntityState.Modified:
+                            Entry(entityRef).Property(x => x.CreatedDate).IsModified = false;
+                            entityRef.UpdateDate = DateTime.Now;
+                            break;
+                    }
+
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
     }
 }
