@@ -26,6 +26,12 @@ namespace NlayerApi.Web.Controllers
             var categorydata = _mapper.Map<List<CategoryDto>>(categories);
             ViewBag.categories = new SelectList(categorydata, "Id", "Name");
         }
+        public async Task GetCategory(int categoryId)
+        {
+            var categories = await _categoryService.GetAllAsync();
+            var categorydata = _mapper.Map<List<CategoryDto>>(categories);
+            ViewBag.categories = new SelectList(categorydata, "Id", "Name", categoryId);
+        }
         public async Task<IActionResult> Index()
         {
             var customResponseDto = await _productService.GetProductWithCategory();
@@ -33,6 +39,7 @@ namespace NlayerApi.Web.Controllers
             return View(customResponseDto.Data);
 
         }
+
         public async Task<IActionResult> Save()
         {
             await GetCategory();
@@ -48,6 +55,31 @@ namespace NlayerApi.Web.Controllers
             }
             await GetCategory();
             return View(productCreateDto);
+        }
+        public async Task<IActionResult> Update(int id)
+        {
+            var data = _mapper.Map<ProductUpdateDto>(await _productService.GetByIdAsync(id));
+            
+            await GetCategory(data.CategoryId);
+            return View(data);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(ProductUpdateDto productUpdateDto)
+        {
+            if (ModelState.IsValid)
+            {
+                await _productService.UpdateAsync(_mapper.Map<Product>(productUpdateDto));
+                return RedirectToAction(nameof(Index));
+            }
+            await GetCategory(productUpdateDto.CategoryId);
+            return View(productUpdateDto);
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var data =await _productService.GetByIdAsync(id);
+            await _productService.RemoveAsync(data);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
