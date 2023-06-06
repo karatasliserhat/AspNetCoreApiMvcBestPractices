@@ -14,4 +14,8 @@
     <ProjectReference Include="..\NlayerApi.Service\NlayerApi.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

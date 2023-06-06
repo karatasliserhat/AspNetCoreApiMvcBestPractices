@@ -5,6 +5,7 @@ using NlayerApi.Core.DTOs;
 using NlayerApi.Core.IServices;
 using NlayerApi.Core.Models;
 using NlayerApi.Repository.Configurations;
+using NlayerApi.Web.Filters;
 
 namespace NlayerApi.Web.Controllers
 {
@@ -56,6 +57,7 @@ namespace NlayerApi.Web.Controllers
             await GetCategory();
             return View(productCreateDto);
         }
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         public async Task<IActionResult> Update(int id)
         {
             var data = _mapper.Map<ProductUpdateDto>(await _productService.GetByIdAsync(id));
