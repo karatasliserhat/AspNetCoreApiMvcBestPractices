@@ -1,0 +1,5 @@
+Api Https=> https://localhost:7013
+Api http => http://localhost:5225
+
+Mvc Web Https => https://localhost:7000
+Mvc Web Http =>  http://localhost:5116

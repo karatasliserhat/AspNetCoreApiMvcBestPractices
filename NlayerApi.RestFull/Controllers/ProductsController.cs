@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NlayerApi.Core.DTOs;
 using NlayerApi.Core.IServices;
@@ -53,7 +52,7 @@ namespace NlayerApi.RestFull.Controllers
             return CreateActionResult(CustomResponseDto<Product>.Success(204));
         }
         [HttpPut]
-        public async Task<IActionResult> Add(ProductUpdateDto updateDto)
+        public async Task<IActionResult> Update(ProductUpdateDto updateDto)
         {
             var responseDto = _mapper.Map<Product>(updateDto);
             await _productService.UpdateAsync(responseDto);

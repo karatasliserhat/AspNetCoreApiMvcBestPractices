@@ -7,6 +7,7 @@ using NlayerApi.Service.Mappings;
 using NlayerApi.Service.Validations;
 using NlayerApi.Web.Filters;
 using NlayerApi.Web.Modules;
+using NlayerApi.Web.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddFluentValidation(opts => opts.RegisterValidatorsFromAssemblyContaining<ProductValidation>());
 
+
+builder.Services.AddHttpClient<ProductApiService>(opts =>
+{
+    opts.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+});
+
+builder.Services.AddHttpClient<CategoryApiService>(opts =>
+{
+    opts.BaseAddress = new Uri(builder.Configuration["BaseUrl"]);
+});
 
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 
