@@ -21,8 +21,11 @@ namespace NlayerApi.RestFull.Modules
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>)).InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(Service<>)).As(typeof(IService<>)).InstancePerLifetimeScope();
 
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(ServiceWithDto<,>)).As(typeof(IServiceWithDto<,>)).InstancePerLifetimeScope();
 
+
+            builder.RegisterType<ProductServiceWithDto>().As<IProductServiceWithDto>().InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
             var apiAssembly = Assembly.GetExecutingAssembly();
             var repoAssembly = Assembly.GetAssembly(typeof(AppDbContext));
             var serviceAssebly = Assembly.GetAssembly(typeof(MapperProfile));

@@ -44,6 +44,7 @@ namespace NlayerApi.Repository.Context
                     {
 
                         case EntityState.Added:
+                            Entry(entityRef).Property(x => x.UpdateDate).IsModified = false;
                             entityRef.CreatedDate = DateTime.Now;
                             break;
                         case EntityState.Modified:
@@ -55,6 +56,28 @@ namespace NlayerApi.Repository.Context
                 }
             }
             return base.SaveChangesAsync(cancellationToken);
+        }
+        public override int SaveChanges()
+        {
+            foreach (var item in ChangeTracker.Entries())
+            {
+                if (item.Entity is BaseModel entityRef)
+                {
+                    switch (item.State)
+                    {
+                        case EntityState.Added:
+                            Entry(entityRef).Property(x => x.UpdateDate).IsModified = false;
+                            entityRef.CreatedDate = DateTime.Now;
+                            break;
+                        case EntityState.Modified:
+                            Entry(entityRef).Property(x => x.CreatedDate).IsModified = false;
+                            entityRef.UpdateDate = DateTime.Now;
+                            break;
+                    }
+                }
+
+            }
+            return base.SaveChanges();
         }
 
     }

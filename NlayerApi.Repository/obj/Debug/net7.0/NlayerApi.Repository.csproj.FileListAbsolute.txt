@@ -1,0 +1,17 @@
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Repository.deps.json
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Repository.runtimeconfig.json
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Repository.dll
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Repository.pdb
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Core.dll
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\bin\Debug\net7.0\NlayerApi.Core.pdb
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.csproj.AssemblyReference.cache
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.AssemblyInfoInputs.cache
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.AssemblyInfo.cs
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.csproj.CoreCompileInputs.cache
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.csproj.CopyComplete
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.dll
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\refint\NlayerApi.Repository.dll
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.pdb
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\NlayerApi.Repository.genruntimeconfig.cache
+C:\Users\glb90090219\Documents\Tfs\serhatkaratasli\IdentityUserProject\NlayerAspNetCoreApi\NlayerApi.Repository\obj\Debug\net7.0\ref\NlayerApi.Repository.dll
